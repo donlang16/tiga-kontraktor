@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>TIGA Kontraktor — Architecture · Engineering · Construction</title>
+  <meta name="description" content="TIGA Kontraktor — perusahaan jasa konstruksi terintegrasi. Arsitektur, rekayasa, dan konstruksi dengan presisi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- preloader: gates the experience until the coarse frame set is ready -->
+  <div class="loader" id="loader" aria-label="Memuat">
+    <span class="loader__mark">TIGA</span>
+    <span class="loader__bar"><span class="loader__fill" id="loaderFill"></span></span>
+    <span class="loader__pct" id="loaderPct">0%</span>
+  </div>
+
+  <!-- ══════════════════════ STAGE (fixed, scroll never moves the page) ══════════════════════ -->
+  <main class="stage" id="stage" aria-label="TIGA Kontraktor — pengalaman imersif">
+
+    <!-- Living architectural canvas : museum platform -->
+    <div class="exhibit" aria-hidden="true">
+      <div class="exhibit__shadow"></div>
+      <div class="exhibit__mask-x">
+        <div class="exhibit__mask-y">
+          <canvas id="heroCanvas" class="exhibit__canvas"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── UI layer (always above the video, never inside it) ── -->
+    <header class="topbar">
+      <a class="topbar__brand" href="#" data-home>
+        <span class="topbar__mark">TIGA</span>
+        <span class="topbar__sub">Kontraktor</span>
+      </a>
+      <nav class="topbar__nav" aria-label="Navigasi utama">
+        <button class="navlink" data-panel="tentang">Tentang</button>
+        <button class="navlink" data-panel="layanan">Layanan</button>
+        <button class="navlink" data-panel="proyek">Proyek</button>
+        <button class="navlink" data-panel="kontak">Kontak</button>
+      </nav>
+      <a class="topbar__cta" href="https://wa.me/628111667111?text=Halo%20TIGA%20Kontraktor%2C%20saya%20ingin%20memulai%20proyek." target="_blank" rel="noopener">Mulai Proyek</a>
+      <button class="topbar__menu" data-menu aria-label="Buka menu">Menu</button>
+    </header>
+
+    <!-- progress rail -->
+    <aside class="rail" aria-hidden="true">
+      <span class="rail__pct" id="railPct">00</span>
+      <span class="rail__track"><span class="rail__fill" id="railFill"></span></span>
+      <span class="rail__label">Timeline</span>
+    </aside>
+
+    <!-- stage index (clickable: jumps the timeline to that chapter) -->
+    <aside class="phases" aria-label="Bab timeline">
+      <button class="phase-dot" data-stage="0">01</button>
+      <button class="phase-dot" data-stage="1">02</button>
+      <button class="phase-dot" data-stage="2">03</button>
+      <button class="phase-dot" data-stage="3">04</button>
+      <button class="phase-dot" data-stage="4">05</button>
+      <button class="phase-dot" data-stage="5">06</button>
+    </aside>
+
+    <!-- scroll-driven copy -->
+    <div class="copy" aria-live="polite">
+      <div class="copy__stack">
+        <h1 class="copy__item" data-stage="0">Architecture.<br />Engineering.<br />Construction.</h1>
+        <p class="copy__item" data-stage="1">Every project begins with clarity.</p>
+        <p class="copy__item" data-stage="2">Engineered for construction.</p>
+        <p class="copy__item" data-stage="3">Every layer matters.</p>
+        <p class="copy__item" data-stage="4">Precision in execution.</p>
+        <p class="copy__item" data-stage="5">Built to last.</p>
+      </div>
+    </div>
+
+    <!-- bottom line -->
+    <footer class="baseline">
+      <p class="baseline__note">Jakarta · Bandung · Surabaya</p>
+      <div class="baseline__hint" id="scrollHint">
+        <span>Scroll untuk menjelajah</span>
+        <span class="baseline__line"></span>
+      </div>
+      <p class="baseline__note baseline__note--right">Sejak 2009</p>
+    </footer>
+
+    <!-- ambience toggle -->
+    <button class="sound" id="soundToggle" aria-label="Suara ambience" aria-pressed="false" title="Suara ambience">
+      <span class="sound__bar"></span>
+      <span class="sound__bar"></span>
+      <span class="sound__bar"></span>
+      <span class="sound__bar"></span>
+    </button>
+  </main>
+
+  <!-- ══════════════════════ OVERLAY PANELS ══════════════════════ -->
+  <div class="panels" id="panels">
+
+    <section class="panel" data-panel-id="tentang" aria-label="Tentang TIGA">
+      <div class="panel__inner">
+        <p class="panel__kicker">01 — Tentang</p>
+        <h2 class="panel__title">Tiga disiplin.<br />Satu tanggung jawab.</h2>
+        <div class="panel__cols">
+          <p>TIGA Kontraktor adalah perusahaan jasa konstruksi terintegrasi yang menyatukan arsitektur, rekayasa struktur, dan pelaksanaan konstruksi di bawah satu atap. Nama kami adalah janji kami: tiga disiplin yang biasanya berjalan sendiri-sendiri, kami satukan dalam satu garis tanggung jawab — dari gambar pertama hingga serah terima kunci.</p>
+          <p>Sejak 2009 kami telah menyelesaikan lebih dari 140 proyek — hunian privat, gedung komersial, dan fasilitas industri — dengan rekam jejak nol kegagalan struktur dan 96% penyelesaian tepat waktu. Kami percaya bangunan yang baik lahir dari kejelasan: kejelasan desain, kejelasan biaya, dan kejelasan jadwal.</p>
+        </div>
+        <ul class="stats">
+          <li><strong>140+</strong><span>Proyek selesai</span></li>
+          <li><strong>17</strong><span>Tahun beroperasi</span></li>
+          <li><strong>96%</strong><span>Tepat waktu</span></li>
+          <li><strong>Zero</strong><span>Kegagalan struktur</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel" data-panel-id="layanan" aria-label="Layanan">
+      <div class="panel__inner">
+        <p class="panel__kicker">02 — Layanan</p>
+        <h2 class="panel__title">Dari gagasan<br />hingga serah terima.</h2>
+        <ol class="services">
+          <li>
+            <span class="services__num">01</span>
+            <div><h3>Design &amp; Build</h3><p>Satu kontrak untuk desain arsitektur dan pelaksanaan. Satu pihak yang bertanggung jawab atas biaya, mutu, dan waktu.</p></div>
+          </li>
+          <li>
+            <span class="services__num">02</span>
+            <div><h3>Struktur &amp; Sipil</h3><p>Rekayasa struktur beton, baja, dan pondasi dalam — dihitung presisi, dieksekusi oleh tim yang sama yang menghitungnya.</p></div>
+          </li>
+          <li>
+            <span class="services__num">03</span>
+            <div><h3>Interior &amp; Fit-out</h3><p>Penyelesaian interior komersial dan residensial dengan detail joinery dan material yang terkurasi.</p></div>
+          </li>
+          <li>
+            <span class="services__num">04</span>
+            <div><h3>Renovasi &amp; Restorasi</h3><p>Memperkuat, memperluas, dan menghidupkan kembali bangunan eksisting tanpa kehilangan karakternya.</p></div>
+          </li>
+          <li>
+            <span class="services__num">05</span>
+            <div><h3>Manajemen Konstruksi</h3><p>Pengawasan independen atas jadwal, anggaran, dan mutu untuk pemilik proyek yang menuntut kepastian.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="panel" data-panel-id="proyek" aria-label="Proyek pilihan">
+      <div class="panel__inner">
+        <p class="panel__kicker">03 — Proyek</p>
+        <h2 class="panel__title">Dibangun untuk<br />bertahan lama.</h2>
+        <p class="gallery__lead">Dari struktur hingga serah terima — dokumentasi langsung dari proyek-proyek kami.</p>
+        <div class="gallery" id="gallery"></div>
+
+        <p class="panel__kicker panel__kicker--section">Proyek Pilihan</p>
+        <ul class="projects">
+          <li><span class="projects__year">2025</span><div><h3>Rumah Cipete</h3><p>Hunian privat 620 m² — beton ekspos &amp; kayu ulin, Jakarta Selatan.</p></div><span class="projects__tag">Design &amp; Build</span></li>
+          <li><span class="projects__year">2024</span><div><h3>Graha Antara</h3><p>Gedung perkantoran 8 lantai, 11.400 m², Bandung.</p></div><span class="projects__tag">Struktur &amp; Sipil</span></li>
+          <li><span class="projects__year">2024</span><div><h3>Pavilion Kemang</h3><p>Restoran &amp; galeri seni — bentang baja 18 m tanpa kolom.</p></div><span class="projects__tag">Design &amp; Build</span></li>
+          <li><span class="projects__year">2023</span><div><h3>Gudang Karawang II</h3><p>Fasilitas logistik 24.000 m² — selesai 11 bulan.</p></div><span class="projects__tag">EPC</span></li>
+          <li><span class="projects__year">2022</span><div><h3>Villa Sanur</h3><p>Resor butik 14 kunci — restorasi struktur kolonial 1928.</p></div><span class="projects__tag">Restorasi</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel" data-panel-id="kontak" aria-label="Kontak">
+      <div class="panel__inner">
+        <p class="panel__kicker">04 — Kontak</p>
+        <h2 class="panel__title">Mulai dengan<br />sebuah percakapan.</h2>
+        <div class="panel__cols">
+          <div class="contact">
+            <p class="contact__row"><span>Email</span><a href="mailto:halo@tigakontraktor.co.id">halo@tigakontraktor.co.id</a></p>
+            <p class="contact__row"><span>WhatsApp</span><a href="https://wa.me/628111667111?text=Halo%20TIGA%20Kontraktor%2C%20saya%20ingin%20memulai%20proyek." target="_blank" rel="noopener">+62 811 1667 111</a></p>
+            <p class="contact__row"><span>Kantor</span>Jl. Kemang Timur No. 3<br />Jakarta Selatan 12730</p>
+          </div>
+          <p>Ceritakan lahan Anda, anggaran Anda, dan bayangan Anda tentang bangunan itu. Kami akan datang dengan pertanyaan yang tepat — dan pulang dengan rencana yang jelas. Konsultasi awal tanpa biaya.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- mobile nav -->
+    <section class="panel panel--nav" data-panel-id="nav" aria-label="Menu">
+      <div class="panel__inner">
+        <nav class="bignav">
+          <button class="bignav__link" data-panel="tentang">Tentang</button>
+          <button class="bignav__link" data-panel="layanan">Layanan</button>
+          <button class="bignav__link" data-panel="proyek">Proyek</button>
+          <button class="bignav__link" data-panel="kontak">Kontak</button>
+        </nav>
+      </div>
+    </section>
+
+    <button class="panels__close" id="panelClose" aria-label="Tutup">
+      <span></span><span></span>
+    </button>
+  </div>
+
+  <!-- lightbox for the gallery -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Sebelumnya">&larr;</button>
+    <img class="lightbox__img" id="lightboxImg" alt="Dokumentasi proyek TIGA Kontraktor" />
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Berikutnya">&rarr;</button>
+    <span class="lightbox__counter" id="lightboxCounter"></span>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/ambience.js"></script>
+</body>
+</html>
